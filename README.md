@@ -19,7 +19,7 @@ First step, we need to enable MGDC in our tenant.
 
 1. Navigate to the Admin Centre portal.
 2. Open Settings > Org Settings > Services Tab
-3. Scroll down and look for Microsoft Graph Data Connect. Or click [here]([Settings - Microsoft 365 admin center](https://admin.microsoft.com/#/Settings/Services/:/Settings/L1/O365DataPlan))
+3. Scroll down and look for Microsoft Graph Data Connect. Or click [here](https://admin.microsoft.com/#/Settings/Services/:/Settings/L1/O365DataPlan)
 4. Check "Turn on Microsoft Graph Data Connect on..." Also enable SPO and OneDrive Datasets. 
 5. Click Save!
 
@@ -106,7 +106,7 @@ Create a Container
 
 1. Navigate back to M365 Admin Centre
 2. Open Settings > Org Settings > Security & privacy Tab
-3. Click MGDC apps or use this [link](Settings - Microsoft 365 admin center]https://admin.microsoft.com/#/Settings/MGDCAdminCenter)
+3. Click MGDC apps or use this [link](https://admin.microsoft.com/#/Settings/MGDCAdminCenter)
 4. You should see your app listed here with status "Pending Approval"
 5. Click the app and follow the approval workflow
 
@@ -144,7 +144,7 @@ The spark pool is need to execute the notebook included in the pipeline.
 5. Create
 #### 4.3 Import Pipeline
 
-Before proceeding, please download the pipeline template [Sites_Permissions_Groups.zip](oversharing\Sites_Permissions_Groups.zip) from the repo.
+Before proceeding, please download the pipeline template [Sites_Permissions_Groups.zip](oversharing/Sites_Permissions_Groups.zip) from the repo.
 
 Now click on your Synapse Analytics Workspace and Open Synapse Studio.
 
