@@ -1,0 +1,4 @@
+Site,SiteURL,GroupName,GroupToRemove
+Crisis,https://officedevdemos.sharepoint.com/teams/Crisis,Crisis Owners,Everyone
+Crisis,https://officedevdemos.sharepoint.com/teams/Crisis,Crisis Members,Everyone except external users
+AppleTango,https://officedevdemos.sharepoint.com/sites/AppleTango.com,AppleTango.com Members,Everyone except external users

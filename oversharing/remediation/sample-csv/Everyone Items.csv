@@ -1,0 +1,11 @@
+SITE,ITEM TYPE,EVERYONE GROUP,ROLE DEFINITION,ITEMS,ITEM URL,SITEURL,OWNER NAME,OWNER EMAIL
+Crisis,File,Everyone except external users,Contribute,1,/teams/Crisis/Shared Documents/storytelling ideas.png,https://officedevdemos.sharepoint.com/teams/Crisis,Admin,admin@officedevdemos.onmicrosoft.com
+Crisis,File,Everyone,Contribute,1,/teams/Crisis/Shared Documents/storytelling ideas.png,https://officedevdemos.sharepoint.com/teams/Crisis,,
+AppleTango.com,File,Everyone except external users,Contribute,1,/sites/appletango.com/Shared Documents/image file.jpg,https://officedevdemos.sharepoint.com/sites/AppleTango.com,,
+AppleTango.com,File,Everyone,Contribute,1,/sites/appletango.com/Shared Documents/image file.jpg,https://officedevdemos.sharepoint.com/sites/AppleTango.com,,
+Crisis,List,Everyone,Contribute,1,/teams/Crisis/Shared Documents,https://officedevdemos.sharepoint.com/teams/Crisis,,
+Crisis,List,Everyone except external users,Contribute,1,/teams/Crisis/Shared Documents,https://officedevdemos.sharepoint.com/teams/Crisis,,
+Crisis,Folder,Everyone,Contribute,1,/teams/Crisis/Shared Documents/Pete,https://officedevdemos.sharepoint.com/teams/Crisis,,
+Crisis,Folder,Everyone except external users,Contribute,1,/teams/Crisis/Shared Documents/Pete,https://officedevdemos.sharepoint.com/teams/Crisis,,
+Crisis,Folder,Everyone,Contribute,1,/teams/Crisis/Shared Documents/Pete/Marley/Joshua/Sully,https://officedevdemos.sharepoint.com/teams/Crisis,,
+Crisis,Folder,Everyone except external users,Contribute,,/teams/Crisis/Shared Documents/Pete/Marley/Joshua/Sully,https://officedevdemos.sharepoint.com/teams/Crisis,,
