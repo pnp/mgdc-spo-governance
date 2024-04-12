@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "AZURE_CLIENT_ID": "21751e9d-0c3d-4cb1-8f44-49ee81a9b20c",
+    "AZURE_CLIENT_SECRET": "sTU8",
+    "AZURE_TENANT_ID": "75e67881-b174-484b-9d30-c581c7ebc177",
+    "workspaceName": "grover-mgdc",
+    "pipelineName": "TestTrigger"
+  }
+}
