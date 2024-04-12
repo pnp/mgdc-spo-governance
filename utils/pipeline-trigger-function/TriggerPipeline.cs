@@ -42,18 +42,18 @@ namespace groveale
             var pipelineName = Environment.GetEnvironmentVariable("pipelineName");
             var apiVersion = "2020-12-01";
 
-            var url = $"https://{workspaceName}.dev.azuresynapse.net/pipelines/{pipelineName}/?api-version={apiVersion}";
+            var url = $"https://{workspaceName}.dev.azuresynapse.net/pipelines/{pipelineName}/createRun/?api-version={apiVersion}";
 
             // Create an instance of DefaultAzureCredential.
             // if you are running this function locally, you need to set the following environment variables:
             // AZURE_CLIENT_ID, AZURE_TENANT_ID, AZURE_CLIENT_SECRET
             var credential = new DefaultAzureCredential();
 
-            //var tokenRequestContextOG = new TokenRequestContext(new[] { "https://dev.azuresynapse.net/.default" });
-            var tokenRequestContext = new TokenRequestContext(scopes: new string[] { $"https://{workspaceName}.dev.azuresynapse.net/.default" });
+            var tokenRequestContextOG = new TokenRequestContext(new[] { "https://dev.azuresynapse.net/.default" });
+            //var tokenRequestContext = new TokenRequestContext(scopes: new string[] { $"https://{workspaceName}.dev.azuresynapse.net/.default" });
 
             // Get an access token for the Synapse REST API.
-            var token = await credential.GetTokenAsync(tokenRequestContext);
+            var token = await credential.GetTokenAsync(tokenRequestContextOG);
 
             // Set the necessary headers for the HTTP request.
             client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token.Token);
