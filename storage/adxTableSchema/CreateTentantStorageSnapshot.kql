@@ -1,0 +1,16 @@
+.create table TenantStorageSnapshot (
+    SnapshotDate: datetime,
+    RunDate: datetime,
+    TotalStorage: long,
+    ActiveStorage: long,
+    InactiveStorage: long,
+    RecycledStorage: long,
+    DeletedStorage: long,
+    ActivePVStorage: long,
+    InactivePVStorage: long,
+    TotalSitesCount: long,
+    ActiveSitesCount: long,
+    InactiveSitesCount: long,
+    RecycledSitesCount: long,
+    DeletedSitesCount: long
+)

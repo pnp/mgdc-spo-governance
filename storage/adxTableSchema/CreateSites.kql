@@ -52,5 +52,6 @@
     CreatedTime: datetime,
     Operation: string,
     LastUserAccessDate: datetime,
+    PreviousVersionSize: long,
     SnapshotDate: datetime
 )

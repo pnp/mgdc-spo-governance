@@ -1,0 +1,8 @@
+.create table TableName (
+    FilesObjects: long,
+    FullPull: bool,
+    RunDate: datetime,
+    RunId: string,
+    SiteObjects: long,
+    SnapshotDate: datetime
+)

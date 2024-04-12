@@ -1,0 +1,9 @@
+.create table SitesStorageSnapshot (
+    Id: string,
+    SnapshotDate: datetime,
+    IsInRecycleBin: bool,
+    IsOneDrive: bool,
+    Operation: string,
+    StorageUsed: long,
+    PreviousVersionSize: long
+)
