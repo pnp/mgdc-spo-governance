@@ -1,4 +1,4 @@
-.create table TableName (
+.create table MGDCPulls (
     FilesObjects: long,
     FullPull: bool,
     RunDate: datetime,
