@@ -1,0 +1,3 @@
+Sites
+| top 20 by PreviousVersionSize desc
+| project Url, StorageMetrics_TotalSize, PreviousVersionSize, LastUserAccessDate, Owner_Email

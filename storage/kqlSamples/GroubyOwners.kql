@@ -1,0 +1,2 @@
+Sites
+| summarize count(Id) by Owner_Email

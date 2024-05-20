@@ -1,0 +1,5 @@
+// Join the filtered Sites table with the Files table
+Files
+| join kind=inner (Sites | where RootWeb_WebTemplateId == 21 | project Id, Url) on $left.SiteId == $right.Id
+| where Extension == "pdf"
+| project FileName,  Url, SiteId

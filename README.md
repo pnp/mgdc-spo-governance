@@ -259,3 +259,12 @@ errorCode": "6002", "message": "java.nio.file.AccessDeniedException: Operation f
 ```
 
 This will be because the workspace does not have `Storage Blob Data Contributor` role to the storage account. This is unlikely to happen, unless you reuse and existing storage account.
+
+## ADX
+
+When an Azure Data Explorer (ADX) cluster is in an offline state, it means that the cluster is not actively processing queries or ingesting data. In this scenario, pushing data into the cluster has specific implications:
+
+### Data Ingestion
+Data ingestion involves loading data into a table within your ADX cluster.
+When you push data into an ADX cluster that is offline, the data is not immediately processed or indexed.
+Instead, the data is queued for ingestion once the cluster becomes online.

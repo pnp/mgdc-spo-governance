@@ -1,0 +1,3 @@
+Files
+| summarize Count=count() by FileName
+| where Count > 1

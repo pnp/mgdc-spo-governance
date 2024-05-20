@@ -1,0 +1,4 @@
+let extention = 'url';
+Files
+| where Extension == extention
+| project SiteUrl, FileName, MajorVersion, SizeInBytes, SizeInBytesWithVersions, Extension

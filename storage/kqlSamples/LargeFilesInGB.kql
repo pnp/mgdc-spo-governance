@@ -1,0 +1,5 @@
+let SizeThresholdGB = 0.5;
+let SizeThresholdBytes = SizeThresholdGB * 1024 * 1024 * 1024;
+Files
+| where SizeInBytesWithVersions >= SizeThresholdBytes
+| project SiteUrl, FileName, SizeInBytes, SizeInBytesWithVersions

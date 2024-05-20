@@ -1,0 +1,5 @@
+let DaysThreshold = 365d;
+let CutoffDate = ago(DaysThreshold);
+Sites
+| where LastUserAccessDate < CutoffDate
+| project Url, LastUserAccessDate
