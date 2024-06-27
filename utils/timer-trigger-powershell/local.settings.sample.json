@@ -1,0 +1,16 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=mgdcag2;AccountKey=+AStXc2Y7Q==;EndpointSuffix=core.windows.net",
+    "FUNCTIONS_WORKER_RUNTIME_VERSION": "7.2",
+    "FUNCTIONS_WORKER_RUNTIME": "powershell",
+    "AZURE_CLIENT_ID": "95f40c8c-6311-484b-b6a8-9ddd71f2ed12",
+    "AZURE_CLIENT_SECRET": "OK",
+    "AZURE_TENANT_ID": "f4b2a7fc-780d-4ba9-b9ed-c49cc068365f",
+    "WORKSPACE_NAME": "ag-mgdc-syanpse",
+    "PIPELINE_NAME": "Sites_Permissions_SPGroups_Top1",
+    "STORAGE_CONTAINER_NAME": "forecast",
+    "STORAGE_ACCOUNT_NAME": "agmgdcstorage",
+    "DELTA_DAYS": 2
+  }
+}

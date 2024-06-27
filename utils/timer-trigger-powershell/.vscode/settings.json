@@ -1,0 +1,7 @@
+{
+    "azureAutomation.directory.basePath": "c:\\Program Files\\Microsoft VS Code",
+    "azureFunctions.deploySubpath": ".",
+    "azureFunctions.projectLanguage": "PowerShell",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen"
+}
