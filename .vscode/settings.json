@@ -1,6 +1,6 @@
 {
     "azureAutomation.directory.basePath": "c:\\Program Files\\Microsoft VS Code",
-    "azureFunctions.deploySubpath": "utils\\timer-trigger-csharp/bin/Release/net8.0/publish",
+    "azureFunctions.deploySubpath": "utils\\http-trigger-csharp/bin/Release/net8.0/publish",
     "azureFunctions.projectLanguage": "C#",
     "azureFunctions.projectRuntime": "~4",
     "debug.internalConsoleOptions": "neverOpen",

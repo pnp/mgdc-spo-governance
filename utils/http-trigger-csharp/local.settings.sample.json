@@ -1,0 +1,15 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+    "AZURE_CLIENT_ID": "95f40c8c-6311-484b-b6a8-9ddd71f2ed12",
+    "AZURE_CLIENT_SECRET": "OK-d",
+    "AZURE_TENANT_ID": "f4b2a7fc-780d-4ba9-b9ed-c49cc068365f",
+    "WORKSPACE_NAME": "ag-mgdc-syanpse",
+    "PIPELINE_NAME": "Sites_Permissions_SPGroups_Top1",
+    "STORAGE_CONTAINER_NAME": "forecast",
+    "STORAGE_ACCOUNT_NAME": "agmgdcstorage",
+    "DELTA_DAYS": "14"
+  }
+}

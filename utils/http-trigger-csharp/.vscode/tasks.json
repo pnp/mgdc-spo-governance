@@ -10,10 +10,7 @@
 				"/consoleloggerparameters:NoSummary"
 			],
 			"type": "process",
-			"problemMatcher": "$msCompile",
-			"options": {
-				"cwd": "${workspaceFolder}/utils\\timer-trigger-csharp"
-			}
+			"problemMatcher": "$msCompile"
 		},
 		{
 			"label": "build (functions)",
@@ -29,10 +26,7 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"problemMatcher": "$msCompile",
-			"options": {
-				"cwd": "${workspaceFolder}/utils\\timer-trigger-csharp"
-			}
+			"problemMatcher": "$msCompile"
 		},
 		{
 			"label": "clean release (functions)",
@@ -45,10 +39,7 @@
 				"/consoleloggerparameters:NoSummary"
 			],
 			"type": "process",
-			"problemMatcher": "$msCompile",
-			"options": {
-				"cwd": "${workspaceFolder}/utils\\timer-trigger-csharp"
-			}
+			"problemMatcher": "$msCompile"
 		},
 		{
 			"label": "publish (functions)",
@@ -62,16 +53,13 @@
 			],
 			"type": "process",
 			"dependsOn": "clean release (functions)",
-			"problemMatcher": "$msCompile",
-			"options": {
-				"cwd": "${workspaceFolder}/utils\\timer-trigger-csharp"
-			}
+			"problemMatcher": "$msCompile"
 		},
 		{
 			"type": "func",
 			"dependsOn": "build (functions)",
 			"options": {
-				"cwd": "${workspaceFolder}/utils\\http-trigger-csharp/bin/Debug/net8.0"
+				"cwd": "${workspaceFolder}/bin/Debug/net8.0"
 			},
 			"command": "host start",
 			"isBackground": true,

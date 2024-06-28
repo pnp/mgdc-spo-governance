@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "http_trigger_csharp": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7234",
+      "launchBrowser": false
+    }
+  }
+}
