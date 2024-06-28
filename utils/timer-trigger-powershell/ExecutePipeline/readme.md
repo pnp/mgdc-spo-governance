@@ -38,7 +38,7 @@ The following pipeline variables are required, this is what will be passed to th
 Finally the delta days variable is used by the function to build the start data. End date is hardcoded as 3 days before execution day. Start date is this end date - the delta days. This should align with the functions schedule
 
 ``` json
-"DELTA_DAYS": 7
+"DELTA_DAYS": "7"
 ```
 
 

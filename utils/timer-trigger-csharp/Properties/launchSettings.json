@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "timer_trigger_csharp": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7235",
+      "launchBrowser": false
+    }
+  }
+}

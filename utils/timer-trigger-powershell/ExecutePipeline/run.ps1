@@ -71,5 +71,5 @@ try {
 }
 catch {
     # If the request fails, log the error
-    Write-Error "Failed to start pipeline: $_.Exception.Response.StatusCode.Value__"
+    Write-Error "Failed to start pipeline: $($_.Exception.Response.StatusCode) - $($_.Exception.Response.StatusDescription) - $($_.Exception.Response.Content)"
 }

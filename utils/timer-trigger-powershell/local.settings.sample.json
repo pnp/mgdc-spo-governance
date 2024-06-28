@@ -11,6 +11,6 @@
     "PIPELINE_NAME": "Sites_Permissions_SPGroups_Top1",
     "STORAGE_CONTAINER_NAME": "forecast",
     "STORAGE_ACCOUNT_NAME": "agmgdcstorage",
-    "DELTA_DAYS": 2
+    "DELTA_DAYS": "2"
   }
 }

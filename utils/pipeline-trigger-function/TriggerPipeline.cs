@@ -25,21 +25,20 @@ namespace groveale
             log.LogInformation("C# HTTP trigger function processed a request.");
 
             // pipeline parameters
-            string startTime = req.Query["startTime"];
-            string endTime = req.Query["endTime"];
-            string storageAccountName = req.Query["storageAccountName"];
-            string storageContainerName = req.Query["storageContainerName"];
-
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-            startTime = startTime ?? data?.startTime;
-            endTime = endTime ?? data?.endTime;
-            storageAccountName = storageAccountName ?? data?.storageAccountName;
-            storageContainerName = storageContainerName ?? data?.storageContainerName;
+            // string startTime = req.Query["startTime"];
+            // string endTime = req.Query["endTime"];
 
             // From environment variables
-            var workspaceName = Environment.GetEnvironmentVariable("workspaceName");
-            var pipelineName = Environment.GetEnvironmentVariable("pipelineName");
+            var workspaceName = Environment.GetEnvironmentVariable("WORKSPACE_NAME");
+            var pipelineName = Environment.GetEnvironmentVariable("PIPELINE_NAME");
+            var storageAccountName = Environment.GetEnvironmentVariable("STORAGE_CONTAINER_NAME");
+            var storageContainerName = Environment.GetEnvironmentVariable("STORAGE_ACCOUNT_NAME");
+            var deltaDays = int.Parse(Environment.GetEnvironmentVariable("DELTA_DAYS"));
+
+            // Workout start and end time (endtime is 3 days before now at 00:00) - (starttime is $deltaDays days before endtime at 00:00)
+            string endTime = DateTime.UtcNow.AddDays(-3).ToString("yyyy-MM-dd") + "T00:00:00Z";
+            string startTime = DateTime.Parse(endTime).AddDays(-deltaDays).ToString("yyyy-MM-dd") + "T00:00:00Z";
+
             var apiVersion = "2020-12-01";
 
             var url = $"https://{workspaceName}.dev.azuresynapse.net/pipelines/{pipelineName}/createRun/?api-version={apiVersion}";
