@@ -20,7 +20,7 @@ namespace groverale
         }
 
         [Function("ExecutePipelineTrigger")]
-        public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequest req)
+        public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Admin, "get", "post")] HttpRequest req)
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
 
@@ -56,10 +56,10 @@ namespace groverale
             // Create an anonymous object for the JSON payload (pipeline parmeters).
             var payload = new
             {
-                startTime = startTime,
-                endTime = endTime,
-                storageAccountName = storageAccountName,
-                storageContainerName = storageContainerName
+                StartTime = startTime,
+                EndTime = endTime,
+                StorageAccountName = storageAccountName,
+                StorageContainerName = storageContainerName
             };
 
             // Serialize the object to a JSON string.

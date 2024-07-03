@@ -52,10 +52,10 @@ $headers = @{
 
 # Create the payload
 $payload = @{
-    startTime = $startTime
-    endTime = $endTime
-    storageAccountName = $storageAccountName
-    storageContainerName = $storageContainerName
+    StartTime = $startTime
+    EndTime = $endTime
+    StorageAccountName = $storageAccountName
+    StorageContainerName = $storageContainerName
 }
 
 # convert to JSON
