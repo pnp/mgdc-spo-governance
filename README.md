@@ -4,9 +4,7 @@
 M365 service owners and SharePoint admins require enhanced analytics and insights to understand how their organisations utilise SharePoint and the wider M365 ecosystem. Two key areas that are of focus are understanding oversharing (both internal and external) and storage utlisation. These two activities are possible with traditional technologies, PowerShell, Graph, CSOM but to get item level detail required robust code to handle throttling and can take a long time to perform
 
 ## The Solution
-Microsoft Graph Data Connect (MGDC) for SharePoint provides rich datasets directly to a an Azure subscription. From here, anything is possible, you can then create custom applications, reports, and dashboards using tools like Azure Synapse and Power BI.
-
-As tenants grow larger the way we manage them must change too. There is huge amount of colabration data and insights in the tenant but extracting this data and obtaining the inisght has been a challenge. MGDC addresses this challenge
+ As tenants grow larger the way we manage them must change too. There is huge amount of coloration data and insights in the tenant but extracting this data and obtaining the insight has been a challenge. MGDC addresses this challenge. Microsoft Graph Data Connect (MGDC) for SharePoint provides rich datasets directly to a an Azure subscription. From here, anything is possible, you can then create custom applications, reports, and dashboards using tools like Azure Synapse and Power BI.
 
 - **Enterprise Focus:** Emphasizes security and compliance for enterprise customers.
 - **Comprehensive Data Stories:** Data is persisted, enabling future analysis without the need for point-in-time scripted snapshots. A data warehouse approach
@@ -16,7 +14,9 @@ As tenants grow larger the way we manage them must change too. There is huge amo
 
 ## In this Repo
 
-There are two core solutions in this repo, these solution are Azure Synapse pipeline templates that can be used to extract the required datasets using MGDC for SharePoint to support the oversharing and storage capacity scenarios. The following lists detail some of the insights that that can be obtained using the MGDC datasets
+There are two core solutions in this repo, these solution are Azure Synapse pipeline templates that can be used to extract the required datasets using MGDC for SharePoint to support the oversharing and storage capacity scenarios. These pipeline handle the extraction of SPO data from MGDC into a Azure Data Lake storage account, the pipelines handle "deltas" to help promote that adoption MGDC is not a one time activity. This should be something that is scheduled to run either weekly or bi weekly to ensure the datasets can be used to support on going governance of SPO.
+
+The following two lists detail some of the insights that that can be obtained using the MGDC datasets for SharePoint
 
 ### Insights on Storage Capacity
 
@@ -56,5 +56,27 @@ There are two core solutions in this repo, these solution are Azure Synapse pipe
 If you are new to MGDC for SharePoint I would suggest following this [guide](https://techcommunity.microsoft.com/t5/microsoft-graph-data-connect-for/step-by-step-gather-a-detailed-dataset-on-sharepoint-sites-using/ba-p/4070563) written by Jose Barreto. This will help you to get all the prerequisite M365 configuration switched on and Azure technology provisioned to allow you to execute your first MGDC data pull.
 
 ## Forecasting Cost
+
+MGDC does have a cost. This is $0.75 per 1000 object for all SharePoint datasets except Files. The files dataset has a cost of $0.75 per 50000 objects, so 50x cheaper. It can be difficult to estimate costs for tenant. Total site objects is quite easy to obtain but other datasets are not. We have two pipelines that can be used to provide accurate forecasts without incurring MGDC costs.
+
+* [Capacity Forecast](storage\forecast)
+* [Oversharing Forecast](oversharing\forecast)
+
+
+## Getting Insights
+
+Now you have followed Jose's guide and are happy with your forecast it's time to deploy the pipelines and obtain the full datasets
+
+* [Capacity Pipeline](storage)
+* [Oversharing Pipeline](oversharing)
+
+
+## Automating Pipeline Trigger
+
+To really turn this into the all singing and dancing SharePoint data warehouse. We need to automate the execution of our pipeline. The following Azure function solutions can help you achieve this.
+
+* [PowerShell Timer Trigger](utils\timer-trigger-powershell)
+* [C# Timer Trigger](utils\timer-trigger-csharp)
+* [C# Http Trigger](utils\http-trigger-csharp)
 
 
