@@ -59,8 +59,8 @@ If you are new to MGDC for SharePoint I would suggest following this [guide](htt
 
 MGDC does have a cost. This is $0.75 per 1000 object for all SharePoint datasets except Files. The files dataset has a cost of $0.75 per 50000 objects, so 50x cheaper. It can be difficult to estimate costs for tenant. Total site objects is quite easy to obtain but other datasets are not. We have two pipelines that can be used to provide accurate forecasts without incurring MGDC costs.
 
-* [Capacity Forecast](storage\forecast)
-* [Oversharing Forecast](oversharing\forecast)
+* [Capacity Forecast](storage/forecast)
+* [Oversharing Forecast](oversharing/forecast)
 
 
 ## Getting Insights
@@ -75,8 +75,8 @@ Now you have followed Jose's guide and are happy with your forecast it's time to
 
 To really turn this into the all singing and dancing SharePoint data warehouse. We need to automate the execution of our pipeline. The following Azure function solutions can help you achieve this.
 
-* [PowerShell Timer Trigger](utils\timer-trigger-powershell)
-* [C# Timer Trigger](utils\timer-trigger-csharp)
-* [C# Http Trigger](utils\http-trigger-csharp)
+* [PowerShell Timer Trigger](utils/timer-trigger-powershell)
+* [C# Timer Trigger](utils/timer-trigger-csharp)
+* [C# Http Trigger](utils/http-trigger-csharp)
 
 
