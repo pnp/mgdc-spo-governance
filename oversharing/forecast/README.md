@@ -24,9 +24,9 @@ You can create a spark pool directly from your Synapse Workspace resource in the
 
 Login to your Synapse Studio and import the pipeline.
 
-1. Download the [Storage_Top1.zip](/storage/forecast/Storage_Top1.zip)
+1. Download the [Sites_Permissions_SPGroups_Top1.zip](/oversharing/forecast/Sites_Permissions_SPGroups_Top1.zip)
 
-![Download Storage Forecast Pipeline](/docs/res/DownloadStoreageForecastPipeline.png)
+![Download Oversharing Forecast Pipeline](/docs/res/DLOFPipeline.png)
 
 2. From the Home menu, navigate to `Integrate`
 
@@ -38,51 +38,51 @@ Login to your Synapse Studio and import the pipeline.
 
 4. Select your Linked Services (created following [Jose's blog](https://techcommunity.microsoft.com/t5/microsoft-graph-data-connect-for/step-by-step-gather-a-detailed-dataset-on-sharepoint-sites-using/ba-p/4070563)) and click Open Pipeline. This will import 1 pipeline, 4 datasets and 1 notebook into your Synapse Studio.
 
-![Open Pipeline](/docs/res/OpenSFPipeline.png)
+![Open Pipeline](/docs/res/OpenOFPipeline.png)
 
 5. Before publishing, navigate to the Forecast Notebook, under the develop tab and ensure that a spark pool has been selected in the `Attach to` dropdown
 
-![Open Pipeline](/docs/res/AttachTo.png)
+![Open Pipeline](/docs/res/AttachToOf.png)
 
 6. Click Publish all > Publish
 
-![Publish](/docs/res/PublishSFPipeline.png)
+![Publish](/docs/res/PublishOFPipeline.png)
 
 
 ## Forecast for Full Pull
 
 Great you are now ready to execute the pipeline to obtain a forecast. To obtain a full pull we need to provide both the same start and end date.
 
-1. Navigate to the Integrate Menu and select the `Storage_Top1` pipeline. Click `Add Trigger` > `Trigger now`
+1. Navigate to the Integrate Menu and select the `Sites_Permissions_SPGroups_Top1` pipeline. Click `Add Trigger` > `Trigger now`
 
-![Trigger Pipeline](/docs/res/TriggerSFPipeline.png)
+![Trigger Pipeline](/docs/res/TriggerOFPipeline.png)
 
 2. Populate full pull parameters and click `OK`
 
-![Populate Full Pull Parameters](/docs/res/SFFullPullTrigger.png)
+![Populate Full Pull Parameters](/docs/res/OFFullPullTrigger.png)
 
 3. Navigate to the Monitor tab to see the execution details. Wait for the pipeline to `Complete`. Typically this will be 25 minutes.
 
-![Monitor](/docs/res/SFPipelineExecution.png)
+![Monitor](/docs/res/OFPipelineExecution.png)
 
-4. Once complete we can check the details extracted int he notebook
+4. Once complete we can check the details extracted in the notebook
 
 
 ## Forecast for Delta Pull
 
 Great you are now ready to execute the pipeline to obtain a delta forecast. To obtain a delta pull we need to provide a different start and end date.
 
-1. Navigate to the Integrate Menu and select the `Storage_Top1` pipeline. Click `Add Trigger` > `Trigger now`
+1. Navigate to the Integrate Menu and select the `Sites_Permissions_SPGroups_Top1` pipeline. Click `Add Trigger` > `Trigger now`
 
-![Trigger Pipeline](/docs/res/TriggerSFPipeline.png)
+![Trigger Pipeline](/docs/res/TriggerOFPipeline.png)
 
 2. Populate parameters and click `OK`. Notice that the dates are 7 days apart. This timescale should be ajusted for the expected cadence. i.e. if running bi-weekly then get a delta forecast for a 14 day period.
 
-![Populate Full Pull Parameters](/docs/res/SFDeltaPullTrigger.png)
+![Populate Full Pull Parameters](/docs/res/OFDeltaPullTrigger.png)
 
 3. Navigate to the Monitor tab to see the execution details. Wait for the pipeline to `Complete`. Typically this will be 25 minutes.
 
-![Monitor](/docs/res/SFPipelineExecution.png)
+![Monitor](/docs/res/OFPipelineExecution.png)
 
 4. Once complete we can check the details extracted in the notebook
 
