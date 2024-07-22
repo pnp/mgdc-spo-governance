@@ -6,6 +6,34 @@ A very important part of adopting any solution is understanding what it will cos
 
 Currently, the forecasting pipeline requires a Spark pool to execute the notebook that is used to pull out the total objects from the job metadata that is returned to the storage account on successful execution of MGDC. Future aspirations are to have a different process extract this info and serve up in some form of web interface. But for now you need a Spark pool. Sorry! If you already have a spark pool in your Synapse workspace then great you can use this.
 
+### MGDC App datasets
+
+If you followed [Jose's blog](https://techcommunity.microsoft.com/t5/microsoft-graph-data-connect-for/step-by-step-gather-a-detailed-dataset-on-sharepoint-sites-using/ba-p/4070563) you should have an MGDC app that has permission to extract the Sites dataset.
+
+For oversharing we need the following three datasets:
+
+* Sites
+* Permission
+* SPOGroups
+
+Please navigate to you MGDC app in the Azure portal and validate that the app has permission to extract these datasets. Remember that if you make any changes you will need to re-approve the app in the MAC (using another global admin account)
+
+1. Navigate to the MGDC app in the Azure portal and select you app
+
+![MGDC App Azure](/docs/res/MGDCAzure.png)
+
+2. Validate the datasets under settings
+
+![MGDC Oversharing Datasets](/docs/res/MGDCOverSharingDatasets.png)
+
+3. NAvigate to MGDC apps in the Microsoft Admin Centre. Settings > Org Settings > Security & Privacy 
+
+![MGDC MAC](/docs/res/MGDCMACApprove.png)
+
+4. Approve (if required). Click and follow the approval flow.
+
+![MGDC Update](/docs/res/MGDCUpdate.png)
+
 ### Spark Pool
 
 You can create a spark pool directly from your Synapse Workspace resource in the Azure portal
