@@ -93,8 +93,23 @@ Great you are now ready to execute the pipeline to obtain a forecast. To obtain 
 
 ![Monitor](/docs/res/OFPipelineExecution.png)
 
-4. Once complete we can check the details extracted in the notebook
+4. Once complete we can check the details extracted in the notebook - If you're pipeline failed then please check the [Troubleshooting Section](/docs/Troubleshooting.md)
 
+![Pipeline Complete](/docs/res/OFPipelineComplete.png)
+
+5. If the pipeline `Succeeded`, click on the pipeline run which will open the pipeline activity list. Hover over the notebook activity and click on the glasses icon. This will open the notebook snapshot
+
+![Pipeline Complete](/docs/res/OFPiplineSucceded.png)
+
+6. Scroll down to the bottom of the notebook until you see a table similar to the below
+
+![Forecast Results](/docs/res/OFFullPullForecastResults.png)
+
+We can now use the following formula to work out the MGDC cost of a full pull
+
+$$
+\text{Cost} = \frac{\text{Sites} + \text{Permissions} + \text{Groups}}{1000} \times 0.75
+$$
 
 ## Forecast for Delta Pull
 
@@ -112,5 +127,25 @@ Great you are now ready to execute the pipeline to obtain a delta forecast. To o
 
 ![Monitor](/docs/res/OFPipelineExecution.png)
 
-4. Once complete we can check the details extracted in the notebook
+4. Once complete we can check the details extracted in the notebook - If you're pipeline failed then please check the [Troubleshooting Section](/docs/Troubleshooting.md)
+
+![Pipeline Complete](/docs/res/OFPipelineComplete.png)
+
+5. If the pipeline `Succeeded`, click on the pipeline run which will open the pipeline activity list. Hover over the notebook activity and click on the glasses icon. This will open the notebook snapshot
+
+![Pipeline Complete](/docs/res/OFPiplineSucceded.png)
+
+6. Scroll down to the bottom of the notebook until you see a table similar to the below
+
+![Forecast Results](/docs/res/OFDeltaPullForecastResults.png)
+
+We can now use the following formula to work out the ongoing monthly MGDC, the below example assumes weekly MGDC delta snapshots. Remember that the delta may fluctuate each week based on user activity
+
+$$
+\text{Monthly Cost} = \frac{\text{Sites} + \text{Permissions} + \text{Groups}}{1000} \times 4 \times 0.75
+$$
+
+
+
+
 
