@@ -1,30 +1,26 @@
-# Oversharing
+# Storage
 
-The oversharing pipeline has been developed with the following in mind.
+The storage pipeline has been developed with the following in mind.
 
-**SPO Permission Analysis**: The oversharing pipeline provides comprehensive SharePoint Online (SPO) permission analysis. This ensures that all internal user claims are accurately identified while also including external user claims, group membership and powerful role based claims such as everyone except external users
+**SPO Storage Analysis**: The storage analysis pipeline delivers an extensive SharePoint Online (SPO) storage analysis. This ensures that all storage usage is meticulously accounted for, including detailed insights into individual site collections, document libraries, and specific file sizes. The analysis also incorporates trends in storage consumption over time, identifies unused or duplicate files, and provides recommendations for optimizing storage allocation and usage efficiency
 
 **Delta Pulls for Efficient Cost Management**: The tool supports delta pulls, allowing for efficient cost management by only retrieving changes since the last data pull. This reduces the MGDC costs and ensures up-to-date information without unnecessary data processing.
-
-**Copilot Readiness**: Designed with Copilot readiness in mind, the provided dashboard highlights potential areas of concern for rolling out M365 Copilot. This ensures that your organization is prepared for the future of intelligent data management and collaboration.
-
-**Use Cases**: Ideal for organizations looking to optimize their SharePoint Online permissions, the pipeline + PowerBI dashboard helps in identifying all permission objects across SPO. This is particularly useful for security audits, compliance checks, and overall data governance.
 
 ## Prereqs
 
 ### Forecast - IMPORTANT!
 
-Please go and run the `Oversharing Forecast` pipeline before running this one. This will ensure you have full visibility of all MGDC costs associated with the solution before you run it.
+Please go and run the `Storage Forecast` pipeline before running this one. This will ensure you have full visibility of all MGDC costs associated with the solution before you run it.
 
-Further details can be found [here](/oversharing/forecast/README.md)
+Further details can be found [here](/storage/forecast/README.md)
 
-### Import the Low Code Oversharing Pipeline
+### Import the Low Code Storage Pipeline
 
 Login to your Synapse Studio and import the pipeline.
 
-1. Download the [Oversharing_LowCode.zip](/oversharing/Oversharing_LowCode.zip)
+1. Download the [StorageExploration_LowCode.zip](/oversharing/StorageExploration_LowCode.zip)
 
-![Download Oversharing Pipeline](/docs/res/DLOPipeline.png)
+![Download Storage Pipeline](/docs/res/DLOPipeline.png)
 
 2. From the Home menu, navigate to `Integrate`
 

@@ -2,6 +2,10 @@
 
 A very important part of adopting any solution is understanding what it will cost. Whilst we will have some residual Azure costs, these will be negligible compared to MGDC costs. There has been a pipeline written to extract the total object counts in each dataset required for the Capacity scenario, this being Sites and Files.
 
+> **Note:**
+> 
+> The Files dataset is in private preview until 20th August. Please note you will not be able to run this pipeline before this date unless your tenant has been enrolled on the private preview. 
+
 ## Prereqs
 
 Currently, the forecasting pipeline requires a Spark pool to execute the notebook that is used to pull out the total objects from the job metadata that is returned to the storage account on successful execution of MGDC. Future aspirations are to have a different process extract this info and serve up in some form of web interface. But for now you need a Spark pool. Sorry! If you already have a spark pool in your Synapse workspace then great you can use this.
@@ -13,8 +17,7 @@ If you followed [Jose's blog](https://techcommunity.microsoft.com/t5/microsoft-g
 For oversharing we need the following three datasets:
 
 * Sites
-* Permission
-* SPOGroups
+* Files
 
 Please navigate to you MGDC app in the Azure portal and validate that the app has permission to extract these datasets. Remember that if you make any changes you will need to re-approve the app in the MAC (using another global admin account)
 
@@ -93,7 +96,7 @@ Great you are now ready to execute the pipeline to obtain a forecast. To obtain 
 
 ![Monitor](/docs/res/SFPipelineExecution.png)
 
-4. Once complete we can check the details extracted int he notebook
+4. Once complete we can check the details extracted in the notebook
 
 
 ## Forecast for Delta Pull
