@@ -98,7 +98,16 @@ There should be thee folders in the root container. A fourth `deleted` folder wi
 
 ## Hook up with PowerBI Template
 
-todo - Rework PowerBI
+As part of this solution, there is a sample PowerBI template that can be used visualize and explore the MGDC data.
+
+>[!Note]  
+> Hopefully you already downloaded PowerBI desktop when following [Jose's blog](https://techcommunity.microsoft.com/t5/microsoft-graph-data-connect-for/step-by-step-gather-a-detailed-dataset-on-sharepoint-sites-using/ba-p/4070563) to get started with MGDC. If not in can be downloaded from [here](https://www.microsoft.com/en-us/power-platform/products/power-bi/downloads).
+
+1. Download the [OversharingLowCode.pbit](/oversharing/OversharingLowCode.pbit) from this repo.
+
+
+
+2. Open the PowerBI template, you should be presented with the following window
 
 ## Trigger a Delta Pull
 
