@@ -75,10 +75,11 @@ Now you have followed Jose's guide and are happy with your forecast it's time to
 
 To really turn this into the all singing and dancing SharePoint data warehouse. We need to automate the execution of our pipeline. The following Azure function solutions can help you achieve this.
 
-* [PowerShell Timer Trigger](utils/timer-trigger-powershell)
-* [C# Timer Trigger](utils/timer-trigger-csharp)
-* [C# Http Trigger](utils/http-trigger-csharp)
+* PowerShell Timer Trigger
+* C# Timer Trigger
+* C# HTTP Trigger
 
+Please see the [deployment instructions](/utils/readme.md) for configuring the above solutions
 
 ## Issues
 
