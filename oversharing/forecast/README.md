@@ -2,9 +2,15 @@
 
 A very important part of adopting any solution is understanding what it will cost. Whilst we will have some residual Azure costs, these will be negligible compared to MGDC costs. There has been a pipeline written to extract the total object counts in each dataset required for the Capacity scenario, this being Sites and Files.
 
+>[!Note]  
+> This readme assumes that you have followed [Jose's blog](https://techcommunity.microsoft.com/t5/microsoft-graph-data-connect-for/step-by-step-gather-a-detailed-dataset-on-sharepoint-sites-using/ba-p/4070563) and created the resources required for MGDC
+
 ## Prereqs
 
 Currently, the forecasting pipeline requires a Spark pool to execute the notebook that is used to pull out the total objects from the job metadata that is returned to the storage account on successful execution of MGDC. Future aspirations are to have a different process extract this info and serve up in some form of web interface. But for now you need a Spark pool. Sorry! If you already have a spark pool in your Synapse workspace then great you can use this.
+
+>[!Note]  
+> There are instructions showing how to set up a spark pool further down in the readme 
 
 ### MGDC App datasets
 
@@ -24,9 +30,9 @@ Please navigate to you MGDC app in the Azure portal and validate that the app ha
 
 2. Validate the datasets under settings
 
-![MGDC Oversharing Datasets](/docs/res/MGDCOverSharingDatasets.png)
+![MGDC Oversharing Datasets](/docs/res/MGDCOversharingDatasetss.png)
 
-3. NAvigate to MGDC apps in the Microsoft Admin Centre. Settings > Org Settings > Security & Privacy 
+3. Navigate to MGDC apps in the Microsoft Admin Centre. Settings > Org Settings > Security & Privacy 
 
 ![MGDC MAC](/docs/res/MGDCMACApprove.png)
 
@@ -52,11 +58,11 @@ You can create a spark pool directly from your Synapse Workspace resource in the
 
 Login to your Synapse Studio and import the pipeline.
 
-1. Download the [Sites_Permissions_SPGroups_Top1.zip](/oversharing/forecast/Sites_Permissions_SPGroups_Top1.zip)
+1. Download the [Sites_Permissions_SPGroups_Top1.zip](/oversharing/forecast/Sites_Permissions_SPGroups_Top1.zip) from this repo.
 
 ![Download Oversharing Forecast Pipeline](/docs/res/DLOFPipeline.png)
 
-2. From the Home menu, navigate to `Integrate`
+2. Open up Synapse Studio. From the Home menu, navigate to `Integrate`
 
 ![Integrate Menu](/docs/res/IntegrateMenu.png)
 
@@ -68,7 +74,7 @@ Login to your Synapse Studio and import the pipeline.
 
 ![Open Pipeline](/docs/res/OpenOFPipeline.png)
 
-5. Before publishing, navigate to the Forecast Notebook, under the develop tab and ensure that a spark pool has been selected in the `Attach to` dropdown
+5. Before publishing, navigate to the `Develop Tab` and open the Forecast Notebook. Ensure that a spark pool has been selected in the `Attach to` dropdown
 
 ![Open Pipeline](/docs/res/AttachToOf.png)
 
@@ -86,6 +92,9 @@ Great you are now ready to execute the pipeline to obtain a forecast. To obtain 
 ![Trigger Pipeline](/docs/res/TriggerOFPipeline.png)
 
 2. Populate full pull parameters and click `OK`
+
+>[!Note]  
+> MGDC can only go back 21 days. Please update the start and end data parameters to be no longer 21 days ago.
 
 ![Populate Full Pull Parameters](/docs/res/OFFullPullTrigger.png)
 
@@ -120,6 +129,9 @@ Great you are now ready to execute the pipeline to obtain a delta forecast. To o
 ![Trigger Pipeline](/docs/res/TriggerOFPipeline.png)
 
 2. Populate parameters and click `OK`. Notice that the dates are 7 days apart. This timescale should be ajusted for the expected cadence. i.e. if running bi-weekly then get a delta forecast for a 14 day period.
+
+>[!Note]  
+> MGDC can only go back 21 days. Please update the start and end data parameters to be no longer 21 days ago.
 
 ![Populate Full Pull Parameters](/docs/res/OFDeltaPullTrigger.png)
 
