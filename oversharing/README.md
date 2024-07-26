@@ -181,8 +181,8 @@ There should be four folders in the root container.
 **deleted** - this holds all the deleted objects so you can track what has been deleted int he tenant
 
 ```
-/ temp / permissions / *.json
-/ temp / datasetname / *.json
+/ deleted / permissions / *.json
+/ deleted / datasetname / *.json
 
 ```
 
@@ -214,7 +214,7 @@ There should be four folders in the root container.
 
 6. Check that you have data in the latest folder for each dataset. The old latest should have been overwritten.
 
-![Data in the Latest folder](/docs/res/OverDataLakeFullPull.png)
+![Data in the Latest folder](/docs/res/OverDataLakeDeltaPull.png)
 
 7. Go back to the PowerBI report and refresh the data! PowerBI will reload the data from the newly updated latest folders!
 
