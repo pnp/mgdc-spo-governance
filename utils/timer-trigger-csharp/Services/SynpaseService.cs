@@ -72,9 +72,7 @@ namespace groveale.Services
 
             if (response.IsSuccessStatusCode)
             {
-                var responseContent = await response.Content.ReadAsStringAsync();
-                var runId = JsonSerializer.Deserialize<dynamic>(responseContent).runId;
-                _logger.LogInformation($"Pipeline run ID: {runId}");
+                _logger.LogInformation($"Pipeline triggered successfully");
             }
             else
             {

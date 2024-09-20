@@ -11,6 +11,6 @@
     "TURN_ON_ADX": "true",
     "ADX_CLUSTER_NAME": "mgdc-us",
     "ADX_RESOURCE_GROUP_NAME": "mgdc-us-rg",
-    "ADX_SUBSCRIPTION_ID" : "f4b2a7fc-780d-4ba9-b9ed-c49cc068365f"
+    "ADX_SUBSCRIPTION_ID" : "cb422ab7-e1e5-47d3-a4c1-4c192f132d3f"
   }
 }
