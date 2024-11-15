@@ -35,7 +35,7 @@ if ($env:AZURE_CLIENT_ID -and $env:AZURE_TENANT_ID -and $env:AZURE_CLIENT_SECRET
 $storageContext = New-AzStorageContext -StorageAccountName $storageAccountName -UseConnectedAccount
 
 # List and delete the blobs in the "combined" directory
-$blobs = Get-AzStorageBlob -Container $storageContainerName -Blob "$combinedFolderName/*" -Context $storageContext
+$blobs = Get-AzStorageBlob -Container $storageContainerName -Blob "$combinedFolderName/*/*" -Context $storageContext #| Sort-Object -Property {$_.Name.Length} -Descending
 
 Write-Host "Found $($blobs.Count) blobs in the '$combinedFolderName' directory."
 
