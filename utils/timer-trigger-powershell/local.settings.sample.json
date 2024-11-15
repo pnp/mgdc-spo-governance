@@ -10,7 +10,7 @@
     "WORKSPACE_NAME": "ag-mgdc-syanpse",
     "PIPELINE_NAME": "Sites_Permissions_SPGroups_Top1",
     "STORAGE_CONTAINER_NAME": "forecast",
-    "STORAGE_ACCOUNT_NAME": "agmgdcstorage",
+    "STORAGE_ACCOUNT_NAME": "mgdcag4",
     "DELTA_DAYS": "2"
   }
 }

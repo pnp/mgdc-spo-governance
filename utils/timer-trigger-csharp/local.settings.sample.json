@@ -8,7 +8,8 @@
     "STORAGE_CONTAINER_NAME": "oversharing-lowcode",
     "STORAGE_ACCOUNT_NAME": "agmgdcstorage",
     "DELTA_DAYS": "7",
-    "TURN_ON_ADX": "true",
+    "TURN_ON_ADX": "false",
+    "ADDITIONAL_PIPELINE_NAME": "Oversharing_LowCode",
     "ADX_CLUSTER_NAME": "mgdc-us",
     "ADX_RESOURCE_GROUP_NAME": "mgdc-us-rg",
     "ADX_SUBSCRIPTION_ID" : "cb422ab7-e1e5-47d3-a4c1-4c192f132d3f"

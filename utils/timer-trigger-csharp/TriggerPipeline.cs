@@ -6,6 +6,7 @@ using Azure.Core;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using groveale.Services;
+using Google.Protobuf.WellKnownTypes;
 
 
 namespace groveale
@@ -35,6 +36,13 @@ namespace groveale
             }
 
             await _synapseService.TriggerPipelineAsync();
+
+            var additionalPipelineName = Environment.GetEnvironmentVariable("ADDITIONAL_PIPELINE_NAME");
+
+            if (!String.IsNullOrEmpty(additionalPipelineName))
+            {
+                await _synapseService.TriggerAdditionalPipelineAsync(additionalPipelineName);
+            }
 
             var turnOnADX = Environment.GetEnvironmentVariable("TURN_ON_ADX");
 
