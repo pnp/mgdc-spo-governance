@@ -6,5 +6,5 @@ Leveraging an Azure Logic App is one way to provide an automated scenario to sch
 | 1. Create a new [Azure Logic App](https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-overview) | Name it what you’d like, for example: *MGDCSPOKickoffSynapsePipeline* |
 |-----|-----|
 ### 2. Create a Trigger to Kick Off the Workflow
-| 1. Select Add a Trigger |!(../docs/res/LogicApp1.png)|
+| 1. Select Add a Trigger |![alt](../docs/res/LogicApp1.png)|
 |-----|-----|
