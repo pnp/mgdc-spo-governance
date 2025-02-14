@@ -4,5 +4,5 @@ Leveraging an Azure Logic App is one way to provide an automated scenario to sch
 ## Create a Logic App to Call Pipeline Trigger
 ### 1. Create a Logic App to the Pipeline Trigger
 |     |     |
-|-----|-----|
 | Create a new Logic App | abc123 |
+|-----|-----|
