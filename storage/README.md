@@ -18,7 +18,7 @@ Further details can be found [here](/storage/forecast/README.md)
 
 Login to your Synapse Studio and import the pipeline.
 
-1. Download the [StorageExploration_LowCode.zip](/oversharing/StorageExploration_LowCode.zip)
+1. Download the [StorageExploration_LowCode.zip](/storage/StorageExploration_LowCode.zip)
 
 ![Download Storage Pipeline](/docs/res/DLOPipeline.png)
 
