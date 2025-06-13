@@ -78,6 +78,7 @@ To really turn this into the all singing and dancing SharePoint data warehouse. 
 * PowerShell Timer Trigger
 * C# Timer Trigger
 * C# HTTP Trigger
+* [Logic App](utils/timer-trigger-logic-app/readme.md)
 
 Please see the [deployment instructions](/utils/readme.md) for configuring the above solutions
 
